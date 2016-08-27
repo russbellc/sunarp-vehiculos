@@ -1,6 +1,6 @@
 # sunarp-vehiculos
 busca datos de un vehículo en peru a partir de la Placa
-...shh
+```sh
 <?php
     require ("curl.php");
     require ("sunarp.php");
@@ -10,4 +10,4 @@ busca datos de un vehículo en peru a partir de la Placa
     header('Content-type: application/json');
     echo json_encode( $search->BuscaDatosSunarp($placa), JSON_PRETTY_PRINT );
 ?>
-...
+```
