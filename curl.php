@@ -55,7 +55,7 @@
 		function post( $url, array $post = array(), array $options = array() )
 		{
 			$defaults = array(
-				CURLOPT_HEADER => false,
+				CURLOPT_HEADER => true,
 				CURLOPT_FOLLOWLOCATION => true,
 				CURLOPT_SSL_VERIFYPEER => false,
 				CURLOPT_REFERER => $this->referer,
@@ -69,7 +69,7 @@
 				CURLOPT_TIMEOUT => 250,
 				CURLOPT_ENCODING => $this->compression,
 				CURLOPT_HTTPHEADER => $this->headers,
-				//CURLINFO_HEADER_OUT => false,
+				CURLINFO_HEADER_OUT => true,
 				CURLOPT_POST => true,
 				CURLOPT_POSTFIELDS => http_build_query($post)
 			);
@@ -129,7 +129,7 @@
 			return false;
 		}
 
-		function referer($url = "https://cel.reniec.gob.pe/valreg/valreg.do")
+		function referer($url = "https://google.com.pe/")
 		{
 			$this->referer=$url;
 		}
